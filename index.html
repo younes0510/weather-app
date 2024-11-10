@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="min-h-screen bg-[#E4F1FF] flex items-center justify-center p-4">
+      <!-- Weather Card -->
+      <div
+        
+        class="bg-white/20 backdrop-blur-lg shadow-lg rounded-3xl p-8 w-full max-w-[600px]"
+      >
+        <!-- Search  -->
+        <div  class="relative mb-8">
+          <input
+            type="text"
+            placeholder="Search location..."
+            class="weather-search w-full bg-white/30 backdrop-blur-md rounded-xl py-3 px-4 outline-none text-gray-700 placeholder-gray-500"
+          />
+          <button class="search-btn absolute right-3 top-1/2 -translate-y-1/2">
+            <i class="fas fa-search text-gray-500 text-xl"></i>
+          </button>
+        </div>
+
+        <!--  Info -->
+        <div class="flex justify-between items-start">
+          <div  class="text-gray-700">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-map-marker-alt text-xl"></i>
+              <h2 class="location-name text-2xl font-medium">Algeirs, DZ</h2>
+            </div>
+            <p class="current-date text-sm text-gray-500 mt-1">Today 11 Nov</p>
+          </div>
+          <div  class="text-right">
+            <p class="temperature text-5xl font-semibold text-gray-700">27°C</p>
+            <p class="weather-condition text-gray-500 mt-1">Sunny</p>
+          </div>
+        </div>
+
+        <!--  Details -->
+        <div class="mt-8 grid grid-cols-3 gap-8">
+          <div
+            class="bg-white/30 backdrop-blur-md rounded-2xl p-4 flex flex-col items-center"
+          >
+            <i class="fas fa-tint text-2xl text-black mb-2"></i>
+            <p class="text-sm text-gray-500">Humidity</p>
+            <p class="humidity-value text-xl font-medium text-gray-700">42%</p>
+          </div>
+          <div
+            class="bg-white/30 backdrop-blur-md rounded-2xl p-4 flex flex-col items-center"
+          >
+            <i class="fas fa-wind text-2xl text-black mb-2"></i>
+            <p class="text-sm text-gray-500">Wind</p>
+            <p class="wind-value text-xl font-medium text-gray-700">8 km/h</p>
+          </div>
+          <div
+            class="bg-white/30 backdrop-blur-md rounded-2xl p-4 flex flex-col items-center"
+          >
+            <i class="fas fa-compress-arrows-alt text-2xl text-black mb-2"></i>
+            <p class="text-sm text-gray-500">Pressure</p>
+            <p class="pressure-value text-xl font-medium text-gray-700">1025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script
+      src="https://kit.fontawesome.com/985cabe830.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
